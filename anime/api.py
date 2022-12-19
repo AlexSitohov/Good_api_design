@@ -86,14 +86,14 @@ class LikeAPI(APIView):
     # def post(self, request):
     #     serializer = RatingSerializer(data=request.data)
     #     serializer.is_valid(raise_exception=True)
-        # pk = data['who_like_pk']
-        # count = data.get('count')
-        # anime = Anime.objects.get(pk=pk)
-        # anime.rating += count
-        # anime.save()
-        # anime_serializer = GETAnimeSerializer(anime)
+    # pk = data['who_like_pk']
+    # count = data.get('count')
+    # anime = Anime.objects.get(pk=pk)
+    # anime.rating += count
+    # anime.save()
+    # anime_serializer = GETAnimeSerializer(anime)
 
-        # return Response(anime_serializer.data)
+    # return Response(anime_serializer.data)
 
     def post(self, request, format=None):
         return Response({'received data': request.data})
@@ -114,5 +114,3 @@ def IDK(request):
 
 
 print('HW')
-print('sanya branch')
-print('bat')
