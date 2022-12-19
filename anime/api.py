@@ -111,3 +111,6 @@ def IDK(request):
         data = request.data
         count = data.get('count')
         return Response({'count': count ** 5})
+
+
+print('HW')
