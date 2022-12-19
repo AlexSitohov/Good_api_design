@@ -1,6 +1,7 @@
 from rest_framework.serializers import *
 
 from .models import *
+from rest_framework import validators
 
 
 class StudioSerializer(ModelSerializer):
@@ -18,7 +19,7 @@ class GETAnimeSerializer(ModelSerializer):
     class Meta:
         depth = 1
         model = Anime
-        fields = ['id', 'title', 'description', 'image', 'rating', 'studio', ]
+        fields = ['id', 'title', 'description', 'image', 'rating', 'studio']
 
     # def get_studio_data(self, obj):
     #     return {
@@ -33,4 +34,8 @@ class CreateAnimeSerializer(ModelSerializer):
         model = Anime
         fields = ['id', 'title', 'description', 'image', 'rating', 'studio', ]
 
+
+class RatingSerializer(Serializer):
+    who_like_pk = IntegerField()
+    count = IntegerField()
 
